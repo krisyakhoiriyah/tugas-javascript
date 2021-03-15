@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator</title>
+</head>
+<script language="JavaScript">
+
+	document.write("Dimodifikasi terakhir pada" + document.lastModified);
+	// menampilkan waktu dokumen terakhir diedit
+	function tambah() {
+ 		var angka1=parseFloat(document.calculator.angka1.value);
+ 		var angka2=parseFloat(document.calculator.angka2.value);
+ 		if(isNaN (angka1)==false && isNaN (angka2)==false){
+ 			var hasil=angka1+angka2;
+ 			document.calculator.hasil.value=hasil;
+			// berisi deklarasi beserta variable untuk operasi hitung penjumlahan
+ 		}
+ 		else
+ 			window. alert("Masukkan Angka!")
+	}
+	function kurang() {
+		var angka1=parseFloat(document.calculator.angka1.value);
+ 		var angka2=parseFloat(document.calculator.angka2.value);
+ 		if(isNaN (angka1)==false && isNaN (angka2)==false){
+ 			var hasil=angka1-angka2;
+ 			document.calculator.hasil.value=hasil;
+			// berisi deklarasi beserta variable untuk operasi hitung pengurangan
+ 		}
+ 		else
+ 			window. alert("Masukkan Angka!")
+	}
+	function kali() {
+		var angka1=parseFloat(document.calculator.angka1.value);
+ 		var angka2=parseFloat(document.calculator.angka2.value);
+ 		if(isNaN (angka1)==false && isNaN (angka2)==false){
+ 			var hasil=angka1*angka2;
+ 			document.calculator.hasil.value=hasil;
+			// berisi deklarasi beserta variable untuk operasi hitung perkalian
+ 		}
+ 		else
+ 			window. alert("Masukkan Angka!")
+	}
+	function bagi() {
+		var angka1=parseFloat(document.calculator.angka1.value);
+ 		var angka2=parseFloat(document.calculator.angka2.value);
+ 		if(isNaN (angka1)==false && isNaN (angka2)==false){
+ 			var hasil=angka1/angka2;
+ 			document.calculator.hasil.value=hasil;
+			// berisi deklarasi beserta variable untuk operasi hitung pembagian
+ 		}
+ 		else
+ 			window. alert("Masukkan Angka!")
+	}
+
+</script>
+<body>
+	<h1 align="center"> Kalkulator </h1>
+	<!-- menampilkan judul pada laman -->
+	<form method="POST" name="calculator">
+		<!-- mewadahi elemen yang saling berkaitan -->
+		<table align="center">
+			<!-- untuk membuat table -->
+			<tr>
+				<td>Angka 1 : </td>
+				<!-- memunculkan teks inputan -->
+				<td ><input type="text" name="angka1" size="10"></td>
+			</tr>
+			<tr>
+				<td>Angka 2 : </td>
+				<td><input type="text" name="angka2" size="10"></td>
+				<!-- memunculkan teks inputan -->
+			</tr>
+			<tr>
+				<td></td>
+				<td align="center">
+					<input type="button" value="+" onclick=tambah()>
+					<input type="button" value="-" onclick=kurang()>
+					<input type="button" value="x" onclick=kali()>
+					<input type="button" value="/" onclick=bagi()></td>
+					<!-- memunculkan tombol yang ada pada fungsi -->
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Hasil : </td>
+				<td><input type="text" name="hasil" size="10"></td>
+				<!-- memunculkan hasil -->
+				<td align="center"><input type="reset"></td>
+				<!-- untuk menghapus -->
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
